@@ -1,4 +1,4 @@
 ipython
 matplotlib
 seaborn
-altair==5.4.1
+altair==5.5.0
