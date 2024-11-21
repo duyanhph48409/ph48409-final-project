@@ -1,4 +1,4 @@
-pip install matplotlib
+!pip install matplotlib
 import pandas as pd
 import altair as alt
 import matplotlib.pyplot as plt
