@@ -53,6 +53,7 @@ df_decrease_2014_2013
 len(df_decrease_2014_2013) / len(df_diff_2014_2013) * 100
 
 import altair as alt
+from IPython.display import display
 
 state_order = df.groupby('states')['population'].max().sort_values(ascending=False).index.tolist()
 heatmap = alt.Chart(df).mark_rect().encode(
@@ -63,7 +64,7 @@ heatmap = alt.Chart(df).mark_rect().encode(
     title='Mật độ dân số theo bang và năm'
 )
 
-heatmap
+display(heatmap)
 
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -113,4 +114,4 @@ growth_chart = growth_chart.encode(
     text='growth_rate:Q'
 )
 
-growth_chart
+display(growth_chart)
