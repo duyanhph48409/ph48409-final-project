@@ -100,8 +100,8 @@ df_pivot['growth_rate'] = ((df_pivot['2019'] - df_pivot['2010']) / df_pivot['201
 
 # Tạo biểu đồ bar cho tỷ lệ tăng trưởng
 growth_chart = alt.Chart(df_pivot.reset_index()).mark_bar().encode(
-    alt.X('growth_rate:Q', title='Tỷ lệ tăng trưởng (%)'),
-    alt.Y('states:N', title='Bang'),
+    alt.y('growth_rate:Q', title='Tỷ lệ tăng trưởng (%)'),
+    alt.x('states:N', title='Bang'),
     color='growth_rate:Q'
 ).properties(
     width=600,
